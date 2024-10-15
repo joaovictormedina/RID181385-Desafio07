@@ -1,5 +1,3 @@
-// src/user/user.service.ts
-
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -34,7 +32,7 @@ export class UserService {
   }
 
   async findById(id: number): Promise<User> {
-    return await this.findOne(id); // Reutiliza a lógica de busca do usuário
+    return await this.findOne(id);
   }
 
   async findOneByUsername(username: string): Promise<User | undefined> {
